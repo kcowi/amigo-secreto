@@ -11,11 +11,25 @@ function agregarAmigo(){
         listaAmigos.push(capturaNombre);
     }
     limpiarCaja();
-    //console.log(listaAmigos);
+    imprimirLista(listaAmigos);
 }
 
 //limpiamos la caja del input.
 function limpiarCaja() {
-    document.querySelector('#amigo').value = '';
+    document.querySelector('#amigo').value = "";
 }
 
+//agregar cada elemento del array a la lista html
+function imprimirLista(listaAmigos) {
+    let listaHTML = document.querySelector('#listaAmigos');
+    listaHTML.innerHTML = ""
+    for (let i = 0; i < listaAmigos.length; i++) {
+        let nuevoElemento = document.createElement("li");
+
+        // Asignamos el nombre del amigo al contenido del <li>
+        nuevoElemento.textContent = listaAmigos[i];
+
+        // Añadimos el nuevo elemento <li> a la lista en el DOM
+        listaHTML.appendChild(nuevoElemento);
+    }
+}
