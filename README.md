@@ -4,4 +4,4 @@
 <h2>Funcionalidades</h2>
 <h3>agregar nombres a la lista</h3>
 - Los usuarios pueden ingresar nombres en un campo de entrada y agregarlos a una lista dinámica.
-- - Si el campo está vacío, se mostrará una alerta.
+- Si el campo está vacío, se mostrará una alerta.
