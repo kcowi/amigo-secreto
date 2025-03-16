@@ -19,10 +19,10 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = "";
 }
 
-//agregar cada elemento del array a la lista html
-function imprimirLista(listaAmigos) {
+//agregar cada elemento del array a la lista html.
+function imprimirLista() {
     let listaHTML = document.querySelector('#listaAmigos');
-    listaHTML.innerHTML = ""
+    listaHTML.innerHTML = "";
     for (let i = 0; i < listaAmigos.length; i++) {
         let nuevoElemento = document.createElement("li");
 
@@ -32,4 +32,15 @@ function imprimirLista(listaAmigos) {
         // Añadimos el nuevo elemento <li> a la lista en el DOM
         listaHTML.appendChild(nuevoElemento);
     }
+}
+
+//implementar la funcion sortear amigos.
+function sorteo() {
+    if (listaAmigos.length === 0) {
+        alert("aun no ingresaste ningun nombre.");
+        return;
+    }
+    let indiceSorteado = Math.floor(Math.random()* listaAmigos.length);
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `tu amigo secreto es: ${listaAmigos[indiceSorteado]}`;
 }
